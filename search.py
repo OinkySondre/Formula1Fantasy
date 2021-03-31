@@ -55,34 +55,45 @@ liste = []
 for i in range(len(drivers)):
     liste.append(i)
 
-if False:
+if True:
     comb = combinations(drivers, 5)
     comb = np.array(list(comb))
     comb = comb.tolist()
     for i in comb:
         for u in constuctor:
             lage.append([u]+i)
-    print(len(lage))
 
     for i in range(len(lage)):
-        i = sorted(lage[i], key=lambda x: x[value])
+        i = lage[i]
         verdi = 0
         poeng = 0
-        for u in i:
-            verdi += Decimal(u[value])
-            poeng += int(u[points])
+        for u in range(len(i)):
+            i[u] = i[u][::]
+            i[u][points] = int(i[u][points])
+            verdi += Decimal(i[u][value])
+        i = sorted(i, key=lambda x: x[points], reverse=True)
+
+        test = True
+        for u in range(len(i)):
+            if test:
+                try:
+                    nonTurbo.index(i[u][navn])
+                except ValueError:
+                    i[u][points] *= 2
+                    i[u][navn] += "_TD"
+                    test = False
+            poeng += i[u][points]
+
         if verdi>min_value and verdi<=max_value:
             lager.append([poeng]+i)
 
     lager.sort(reverse=True)
+    print(len(lager))
     print(lager[0])
     print(lager[1])
     print(lager[2])
     print(lager[3])
-
-hei = [["a",2],["b",1],["c",3]]
-hei = sorted(hei, key=lambda x: x[1])
-print(hei)
+    print(lager[4])
 
 if False:
     sjekken = ["videre"]
