@@ -9,7 +9,7 @@ points = 2
 
 runder = 1
 max_value = 100.2
-min_value = 80
+min_value = 90
 
 nonTurbo = ["Ham", "Ver", "Bot", "Mer", "Red", "McL", "Fer", "Ast", "Alp", "AlT", "Alf", "Will", "Has"]
 
@@ -75,6 +75,7 @@ if True:
 
         test = True
         for u in range(len(i)):
+            i[u][points] /= runder
             if test:
                 try:
                     nonTurbo.index(i[u][navn])
