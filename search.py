@@ -6,54 +6,60 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
+megadriver = False
 
-runder = 1
-max_value = 100.2
+runder = 2
+max_value = 100.6
 min_value = 90
 
-nonTurbo = ["Ham", "Ver", "Bot", "Mer", "Red", "McL", "Fer", "Ast", "Alp", "AlT", "Alf", "Will", "Has"]
+nonTurbo = ["Ham", "Ver", "Bot"]
+nonMega = []
 
 constuctor = [
-["Mer",38, 67],
-["Red",25.9, 53],
-["McL", 18.9, 39],
-["Fer", 18.2, 26],
-["Ast", 17.4, 18],
-["Alp", 15.3, 13],
-["AlT", 12.8, 13],
-["Alf", 8.9, 12],
-["Will", 6.3, 6],
-["Has", 6.1, 7]
+["Mer",37.8, 103],
+["Red",26, 97],
+["McL", 18.7, 87],
+["Fer", 18.7, 72],
+["AsM", 16.8, 36],
+["Alp", 15.1, 29],
+["AlT", 13.2, 32],
+["Alf", 8.9, 34],
+["Will", 6.3, 10],
+["Has", 6.1, 19]
 ]
 
 drivers = [
-["Ham", 33.5, 45],
-["Ver", 24.9, 35],
-["Bot", 23.6, 32],
-["Per", 18.4, 23],
-["Ric", 17.2, 15],
-["Lec", 17, 20],
-["Vet", 16, 12],
-["Alo", 15.5, -8],
-["Sai", 14.4, 11],
-["Str", 13.9, 11],
-["Nor", 13.2, 29],
-["Gas", 11.7, 2],
-["Oco", 10, 11],
-["Rai", 9.6, 12],
-["Tsu", 8.9, 16],
-["Glo", 7.9, 5],
-["Lat", 6.5, 1],
-["Rus", 6.2, 10],
-["Msc", 5.8, 11],
-["Maz", 5.5, -14]
+["Ham", 33.4, 85],
+["Ver", 25.1, 79],
+["Bot", 23.5, 23],
+["Per", 18.4, 28],
+["Lec", 17.4, 48],
+["Ric", 16.7, 34],
+["Vet", 15.4, 13],
+["Alo", 15.1, 3],
+["Sai", 14.3, 34],
+["Str", 13.6, 33],
+["Nor", 13.4, 63],
+["Gas", 11.7, 15],
+["Oco", 9.7, 21],
+["Rai", 9.4, 31],
+["Tsu", 9.4, 22],
+["Glo", 7.8, 13],
+["Lat", 6.5, 12],
+["Rus", 6.2, 1],
+["Msc", 5.7, 22],
+["Maz", 5.3, 8]
 ]
 
 lage = []
 lager = []
-liste = []
-for i in range(len(drivers)):
-    liste.append(i)
+
+for i in constuctor:
+    nonTurbo.append(i[navn])
+    nonMega.append(i[navn])
+
+for i in drivers:
+    nonTurbo.append(i[navn]+"_MD")
 
 if True:
     comb = combinations(drivers, 5)
@@ -74,8 +80,22 @@ if True:
         i = sorted(i, key=lambda x: x[points], reverse=True)
 
         test = True
+        if megadriver:
+            test1 = True
+        else:
+            test1 = False
+
         for u in range(len(i)):
             i[u][points] /= runder
+
+            if test1:
+                try:
+                    nonMega.index(i[u][navn])
+                except ValueError:
+                    i[u][points] *= 3
+                    i[u][navn] += "_MD"
+                    test1 = False
+
             if test:
                 try:
                     nonTurbo.index(i[u][navn])
