@@ -6,49 +6,49 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
-megadriver = False
+megadriver = True
 
-runder = 2
-max_value = 100.6
+runder = 3
+max_value = 101.7
 min_value = 90
 
 nonTurbo = ["Ham", "Ver", "Bot"]
 nonMega = []
 
 constuctor = [
-["Mer",37.8, 103],
-["Red",26, 97],
-["McL", 18.7, 87],
-["Fer", 18.7, 72],
-["AsM", 16.8, 36],
-["Alp", 15.1, 29],
-["AlT", 13.2, 32],
-["Alf", 8.9, 34],
-["Will", 6.3, 10],
-["Has", 6.1, 19]
+    ["Mer", 37.6, 173],
+    ["Red", 26.1, 152],
+    ["McL", 18.8, 133],
+    ["Fer", 19, 91],
+    ["AsM", 16.6, 39],
+    ["Alp", 15.1, 65],
+    ["AlT", 13, 43],
+    ["Alf", 8.9, 33],
+    ["Will", 6.3, 10],
+    ["Has", 6.1, 29]
 ]
 
 drivers = [
-["Ham", 33.4, 85],
-["Ver", 25.1, 79],
-["Bot", 23.5, 23],
-["Per", 18.4, 28],
-["Lec", 17.4, 48],
-["Ric", 16.7, 34],
-["Vet", 15.4, 13],
-["Alo", 15.1, 3],
-["Sai", 14.3, 34],
-["Str", 13.6, 33],
-["Nor", 13.4, 63],
-["Gas", 11.7, 15],
-["Oco", 9.7, 21],
-["Rai", 9.4, 31],
-["Tsu", 9.4, 22],
-["Glo", 7.8, 13],
-["Lat", 6.5, 12],
-["Rus", 6.2, 1],
-["Msc", 5.7, 22],
-["Maz", 5.3, 8]
+    ["Ham", 33.3, 128],
+    ["Ver", 25.3, 116],
+    ["Bot", 23.3, 55],
+    ["Per", 18.3, 51],
+    ["Lec", 17.8, 70],
+    ["Ric", 16.4, 48],
+    ["Vet", 15.1, 17],
+    ["Alo", 15, 23],
+    ["Sai", 14.4, 36],
+    ["Str", 13.6, 37],
+    ["Nor", 13.7, 90],
+    ["Gas", 11.7, 29],
+    ["Oco", 9.9, 42],
+    ["Rai", 9.4, 12],
+    ["Tsu", 9.2, 24],
+    ["Glo", 7.8, 21],
+    ["Lat", 6.4, 10],
+    ["Rus", 6.3, 2],
+    ["Msc", 5.7, 33],
+    ["Maz", 5.3, 4]
 ]
 
 lage = []
@@ -87,6 +87,7 @@ if True:
 
         for u in range(len(i)):
             i[u][points] /= runder
+            i[u][points] = round(i[u][points],2)
 
             if test1:
                 try:
@@ -106,7 +107,7 @@ if True:
             poeng += i[u][points]
 
         if verdi>min_value and verdi<=max_value:
-            lager.append([poeng]+i)
+            lager.append([round(poeng)]+[float(verdi)]+i)
 
     lager.sort(reverse=True)
     print(len(lager))
