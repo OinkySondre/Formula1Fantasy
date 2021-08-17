@@ -6,49 +6,49 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
-megadriver = True
+megadriver = False
 
-runder = 3
-max_value = 101.7
+runder = 10
+max_value = 103.2
 min_value = 90
 
 nonTurbo = ["Ham", "Ver", "Bot"]
 nonMega = []
 
 constuctor = [
-    ["Mer", 37.6, 173],
-    ["Red", 26.1, 152],
-    ["McL", 18.8, 133],
-    ["Fer", 19, 91],
-    ["AsM", 16.6, 39],
-    ["Alp", 15.1, 65],
-    ["AlT", 13, 43],
-    ["Alf", 8.9, 33],
-    ["Will", 6.3, 10],
-    ["Has", 6.1, 29]
+    ["Mer", 37.1, 546],
+    ["Red", 26.7, 573],
+    ["McL", 18.6, 402],
+    ["Fer", 18.7, 349],
+    ["AsM", 16.4, 185],
+    ["Alp", 15.1, 170],
+    ["AlT", 12.7, 175],
+    ["Alf", 9.2, 124],
+    ["Will", 6.3, 74],
+    ["Has", 6.1, 99]
 ]
 
 drivers = [
-    ["Ham", 33.3, 128],
-    ["Ver", 25.3, 116],
-    ["Bot", 23.3, 55],
-    ["Per", 18.3, 51],
-    ["Lec", 17.8, 70],
-    ["Ric", 16.4, 48],
-    ["Vet", 15.1, 17],
-    ["Alo", 15, 23],
-    ["Sai", 14.4, 36],
-    ["Str", 13.6, 37],
-    ["Nor", 13.7, 90],
-    ["Gas", 11.7, 29],
-    ["Oco", 9.9, 42],
-    ["Rai", 9.4, 12],
-    ["Tsu", 9.2, 24],
-    ["Glo", 7.8, 21],
-    ["Lat", 6.4, 10],
-    ["Rus", 6.3, 2],
-    ["Msc", 5.7, 33],
-    ["Maz", 5.3, 4]
+    ["Ham", 33, 378],
+    ["Ver", 25.7, 386],
+    ["Bot", 23, 223],
+    ["Per", 18.7, 249],
+    ["Lec", 17.6, 205],
+    ["Ric", 15.8, 157],
+    ["Vet", 15.2, 110],
+    ["Alo", 14.9, 131],
+    ["Sai", 14.4, 176],
+    ["Str", 13.3, 87],
+    ["Nor", 14.2, 317],
+    ["Gas", 11.9, 143],
+    ["Oco", 10, 56],
+    ["Rai", 9.3, 81],
+    ["Tsu", 8.5, 59],
+    ["Glo", 8.1, 75],
+    ["Lat", 6.4, 31],
+    ["Rus", 6.2, 47],
+    ["Msc", 5.8, 89],
+    ["Maz", 5.3, 42]
 ]
 
 lage = []
@@ -111,74 +111,5 @@ if True:
 
     lager.sort(reverse=True)
     print(len(lager))
-    print(lager[0])
-    print(lager[1])
-    print(lager[2])
-    print(lager[3])
-    print(lager[4])
-
-if False:
-    sjekken = ["videre"]
-    def sjekk(arr,i):
-        try:
-            arr.index(i)
-            return "stopp"
-        except ValueError:
-            return "videre"
-    for i in range(1):
-        unntak1 = []
-        unntak2 = []
-        unntak3 = []
-        unntak4 = []
-        for u in range(len(drivers)):
-            lag = [u]
-            for y in range(len(drivers)):
-                try:
-                    #Stopp hvis en ikke er error
-                    sjekken.index(sjekk(unntak1, y))
-                    sjekken.index(sjekk(lag, y))
-                    lag = [u,y]
-                    for t in range(len(drivers)):
-                        try:
-                            sjekken.index(sjekk(unntak1, t))
-                            sjekken.index(sjekk(unntak2, t))
-                            sjekken.index(sjekk(lag, t))
-                            lag = [u,y,t]
-                            for r in range(len(drivers)):
-                                try:
-                                    sjekken.index(sjekk(unntak1, r))
-                                    sjekken.index(sjekk(unntak2, r))
-                                    sjekken.index(sjekk(unntak3, r))
-                                    sjekken.index(sjekk(lag, r))
-                                    lag = [u,y,t,r]
-                                    for e in range(len(drivers)):
-                                        try:
-                                            sjekken.index(sjekk(unntak1, e))
-                                            sjekken.index(sjekk(unntak2, e))
-                                            sjekken.index(sjekk(unntak3, e))
-                                            sjekken.index(sjekk(unntak4, e))
-                                            sjekken.index(sjekk(lag, e))
-                                            lager.append([u,y,t,r,e])
-                                        except ValueError:
-                                            pass
-                                    unntak4.append(r)
-                                except ValueError:
-                                    pass
-                            unntak4 = []
-                            unntak3.append(t)
-                        except ValueError:
-                            pass
-                    unntak3 = []
-                    unntak4 = []
-                    unntak2.append(y)
-                except ValueError:
-                    pass
-            unntak2 = []
-            unntak3 = []
-            unntak4 = []
-            unntak1.append(u)
-        unntak2 = []
-        unntak3 = []
-        unntak4 = []
-        unntak1 = []
-        print(len(lager))
+    for i in range(10):
+        print(lager[i])
