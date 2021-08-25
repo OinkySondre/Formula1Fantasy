@@ -87,7 +87,7 @@ if True:
 
         for u in range(len(i)):
             i[u][points] /= runder
-            i[u][points] = round(i[u][points],2)
+            i[u][points] = round(i[u][points], 2)
 
             if test1:
                 try:
@@ -106,7 +106,7 @@ if True:
                     test = False
             poeng += i[u][points]
 
-        if verdi>min_value and verdi<=max_value:
+        if verdi > min_value and verdi <= max_value:
             lager.append([round(poeng)]+[float(verdi)]+i)
 
     lager.sort(reverse=True)
