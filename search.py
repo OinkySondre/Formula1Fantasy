@@ -6,49 +6,49 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
-megadriver = False
+megadriver = True
 
-runder = 10
-max_value = 103.2
+runder = 1
+max_value = 100
 min_value = 90
 
-nonTurbo = ["Ham", "Ver", "Bot"]
+nonTurbo = ["Ham", "Ver", "Rus"]
 nonMega = []
 
 constuctor = [
-    ["Mer", 37.1, 546],
-    ["Red", 26.7, 573],
-    ["McL", 18.6, 402],
-    ["Fer", 18.7, 349],
-    ["AsM", 16.4, 185],
-    ["Alp", 15.1, 170],
-    ["AlT", 12.7, 175],
-    ["Alf", 9.2, 124],
-    ["Will", 6.3, 74],
-    ["Has", 6.1, 99]
+    ["Mer", 34.5, 20],
+    ["Red", 32.5, 10],
+    ["Fer", 25.0, 9],
+    ["McL", 18.5, 8],
+    ["AsM", 11.5, 7],
+    ["Alp", 14.0, 6],
+    ["AlT", 10.5, 5],
+    ["Alf", 8.0, 4],
+    ["Will", 7.0, 3],
+    ["Has", 6.0, 2]
 ]
 
 drivers = [
-    ["Ham", 33, 378],
-    ["Ver", 25.7, 386],
-    ["Bot", 23, 223],
-    ["Per", 18.7, 249],
-    ["Lec", 17.6, 205],
-    ["Ric", 15.8, 157],
-    ["Vet", 15.2, 110],
-    ["Alo", 14.9, 131],
-    ["Sai", 14.4, 176],
-    ["Str", 13.3, 87],
-    ["Nor", 14.2, 317],
-    ["Gas", 11.9, 143],
-    ["Oco", 10, 56],
-    ["Rai", 9.3, 81],
-    ["Tsu", 8.5, 59],
-    ["Glo", 8.1, 75],
-    ["Lat", 6.4, 31],
-    ["Rus", 6.2, 47],
-    ["Msc", 5.8, 89],
-    ["Maz", 5.3, 42]
+    ["Ham", 31.0, 20],
+    ["Ver", 30.5, 19],
+    ["Rus", 24, 18],
+    ["Lec", 18.0, 17],
+    ["Per", 17.5, 16],
+    ["Sai", 17.0, 15],
+    ["Lan", 16.0, 14],
+    ["Ric", 14.5, 13],
+    ["Gas", 13.5, 12],
+    ["Alo", 12.5, 11],
+    ["Oco", 12.0, 10],
+    ["Vet", 11.5, 9],
+    ["Str", 9.5, 8],
+    ["Bot", 9.0, 7],
+    ["Tsu", 8.5, 6],
+    ["Zho", 8.0, 5],
+    ["Alb", 7.5, 4],
+    ["Lat", 7, 3],
+    ["Msc", 6.5, 2],
+    ["Mag", 5.5, 1]
 ]
 
 lage = []
@@ -69,8 +69,7 @@ if True:
         for u in constuctor:
             lage.append([u]+i)
 
-    for i in range(len(lage)):
-        i = lage[i]
+    for i in lage:
         verdi = 0
         poeng = 0
         for u in range(len(i)):
