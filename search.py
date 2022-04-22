@@ -6,84 +6,97 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
-megadriver = True
+megadriver = False
 
-runder = 1
-max_value = 100
+runder = 3
+max_value = 103.3
 min_value = 90
 
 nonTurbo = ["Ham", "Ver", "Rus"]
 nonMega = []
 print("--------------------------------------------------------------------------------")
+
+
 constuctor = [
-    ["Mer", 34.5, 57],
-    ["Red", 32.5, 4],
-    ["Fer", 25.0, 76],
-    ["McL", 18.5, 9],
-    ["AsM", 11.5, 14],
-    ["Alp", 14.0, 24],
-    ["AlT", 10.5, 10],
-    ["Alf", 8.0, 31],
-    ["Will", 7.0, 15],
-    ["Has", 6.0, 27]
-]
-constuctor = [
-    ["Mer", 34.5, 40],
-    ["Red", 32.5, 60],
-    ["Fer", 25.0, 76],
-    ["McL", 18.5, 9],
-    ["AsM", 11.5, 14],
-    ["Alp", 14.0, 24],
-    ["AlT", 10.5, 10],
-    ["Alf", 8.0, 31],
-    ["Will", 7.0, 15],
-    ["Has", 6.0, 27]
+    ["Mer", 33.9, 155],
+    ["Red", 32.1, 105],
+    ["Fer", 25.8, 183],
+    ["McL", 17.5, 55],
+    ["AsM", 11, 30],
+    ["Alp", 14.1, 47],
+    ["AlT", 10.2, 15],
+    ["Alf", 8.4, 58],
+    ["Will", 6.6, 22],
+    ["Has", 6.7, 51]
 ]
 
 drivers = [
-    ["Ham", 31.0, 34],
-    ["Ver", 30.5, 5],
-    ["Rus", 24, 28],
-    ["Lec", 18.0, 49],
-    ["Per", 17.5, 4],
-    ["Sai", 17.0, 32],
-    ["Lan", 16.0, 1],
-    ["Ric", 14.5, 13],
-    ["Gas", 13.5, 0],
-    ["Alo", 12.5, 9],
-    ["Oco", 12.0, 20],
-    ["Vet", 11.5, 4],
-    ["Str", 9.5, 15],
-    ["Bot", 9.0, 22],
-    ["Tsu", 8.5, 19],
-    ["Zho", 8.0, 14],
-    ["Alb", 7.5, 10],
-    ["Lat", 7, 10],
-    ["Msc", 6.5, 5],
-    ["Mag", 5.5, 27]
+    ["Ham", 30.4, 73],
+    ["Ver", 30.3, 54],
+    ["Rus", 23.9, 87],
+    ["Lec", 18.8, 139],
+    ["Per", 18.0, 61],
+    ["Sai", 17.3, 54],
+    ["Lan", 15.9, 47],
+    ["Ric", 14, 23],
+    ["Gas", 13.1, 27],
+    ["Alo", 12.5, 1],
+    ["Oco", 12.6, 61],
+    ["Vet", 11.4, 12],
+    ["Str", 9.0, 33],
+    ["Bot", 9.4, 40],
+    ["Tsu", 8.4, 3],
+    ["Zho", 8.5, 33],
+    ["Alb", 7.1, 28],
+    ["Lat", 6.7, 9],
+    ["Msc", 6.2, 19],
+    ["Mag", 6.0, 47]
 ]
+
+#--------------------------------------------------------------------------------
+"""
+poeng = [0,49,32,34,28,26,24,22,20,18,16,14,12,10,8,6,4,2,1]
 drivers = [
-    ["Ham", 31.0, 28],
-    ["Ver", 30.5, 38],
-    ["Rus", 24, 28],
-    ["Lec", 18.0, 49],
-    ["Per", 17.5, 25],
-    ["Sai", 17.0, 32],
-    ["Lan", 16.0, 1],
-    ["Ric", 14.5, 13],
-    ["Gas", 13.5, 0],
-    ["Alo", 12.5, 9],
-    ["Oco", 12.0, 20],
-    ["Vet", 11.5, 4],
-    ["Str", 9.5, 15],
-    ["Bot", 9.0, 22],
-    ["Tsu", 8.5, 19],
-    ["Zho", 8.0, 14],
-    ["Alb", 7.5, 10],
-    ["Lat", 7, 10],
-    ["Msc", 6.5, 5],
-    ["Mag", 5.5, 20]
+    ["Ham", drivers[0][1], poeng[4]],
+    ["Ver", drivers[1][1], poeng[2]],
+    ["Rus", drivers[2][1], poeng[6]],
+    ["Lec", drivers[3][1], poeng[1]],
+    ["Per", drivers[4][1], poeng[5]],
+    ["Sai", drivers[5][1], poeng[3]],
+    ["Lan", drivers[6][1], poeng[8]],
+    ["Ric", drivers[7][1], poeng[15]],
+    ["Gas", drivers[8][1], poeng[13]],
+    ["Alo", drivers[9][1], poeng[11]],
+    ["Oco", drivers[10][1], poeng[9]],
+    ["Vet", drivers[11][1], poeng[16]],
+    ["Str", drivers[12][1], poeng[14]],
+    ["Bot", drivers[13][1], poeng[7]],
+    ["Tsu", drivers[14][1], poeng[10]],
+    ["Zho", drivers[15][1], poeng[12]],
+    ["Alb", drivers[16][1], poeng[14]],
+    ["Lat", drivers[17][1], poeng[15]],
+    ["Msc", drivers[18][1], poeng[13]],
+    ["Mag", drivers[19][1], poeng[15]]
 ]
+constuctor = [
+    ["Mer", constuctor[0][1], drivers[0][2]+drivers[2][2]],
+    ["Red", constuctor[1][1], drivers[1][2]+drivers[4][2]],
+    ["Fer", constuctor[2][1], drivers[3][2]+drivers[5][2]],
+    ["McL", constuctor[3][1], drivers[6][2]+drivers[7][2]],
+    ["AsM", constuctor[4][1], drivers[11][2]+drivers[12][2]],
+    ["Alp", constuctor[5][1], drivers[10][2]+drivers[9][2]],
+    ["AlT", constuctor[6][1], drivers[14][2]+drivers[8][2]],
+    ["Alf", constuctor[7][1], drivers[13][2]+drivers[15][2]],
+    ["Will", constuctor[8][1], drivers[16][2]+drivers[17][2]],
+    ["Has", constuctor[9][1], drivers[18][2]+drivers[19][2]],
+]
+"""
+
+#--------------------------------------------------------------------------------
+
+
+
+
 
 lage = []
 lager = []
