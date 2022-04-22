@@ -6,7 +6,7 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
-megadriver = False
+megadriver = True
 
 runder = 3
 max_value = 103.3
@@ -15,7 +15,6 @@ min_value = 90
 nonTurbo = ["Ham", "Ver", "Rus"]
 nonMega = []
 print("--------------------------------------------------------------------------------")
-
 
 constuctor = [
     ["Mer", 33.9, 155],
@@ -54,29 +53,30 @@ drivers = [
 ]
 
 #--------------------------------------------------------------------------------
-"""
+
 poeng = [0,49,32,34,28,26,24,22,20,18,16,14,12,10,8,6,4,2,1]
+runder = 1
 drivers = [
-    ["Ham", drivers[0][1], poeng[4]],
-    ["Ver", drivers[1][1], poeng[2]],
-    ["Rus", drivers[2][1], poeng[6]],
+    ["Ham", drivers[0][1], poeng[7]],
+    ["Ver", drivers[1][1], poeng[3]],
+    ["Rus", drivers[2][1], poeng[5]],
     ["Lec", drivers[3][1], poeng[1]],
-    ["Per", drivers[4][1], poeng[5]],
-    ["Sai", drivers[5][1], poeng[3]],
-    ["Lan", drivers[6][1], poeng[8]],
+    ["Per", drivers[4][1], poeng[4]],
+    ["Sai", drivers[5][1], poeng[2]],
+    ["Lan", drivers[6][1], poeng[10]],
     ["Ric", drivers[7][1], poeng[15]],
     ["Gas", drivers[8][1], poeng[13]],
-    ["Alo", drivers[9][1], poeng[11]],
+    ["Alo", drivers[9][1], poeng[8]],
     ["Oco", drivers[10][1], poeng[9]],
-    ["Vet", drivers[11][1], poeng[16]],
-    ["Str", drivers[12][1], poeng[14]],
-    ["Bot", drivers[13][1], poeng[7]],
+    ["Vet", drivers[11][1], poeng[8]],
+    ["Str", drivers[12][1], poeng[16]],
+    ["Bot", drivers[13][1], poeng[11]],
     ["Tsu", drivers[14][1], poeng[10]],
-    ["Zho", drivers[15][1], poeng[12]],
-    ["Alb", drivers[16][1], poeng[14]],
-    ["Lat", drivers[17][1], poeng[15]],
-    ["Msc", drivers[18][1], poeng[13]],
-    ["Mag", drivers[19][1], poeng[15]]
+    ["Zho", drivers[15][1], poeng[18]],
+    ["Alb", drivers[16][1], poeng[18]],
+    ["Lat", drivers[17][1], poeng[18]],
+    ["Msc", drivers[18][1], poeng[10]],
+    ["Mag", drivers[19][1], poeng[6]]
 ]
 constuctor = [
     ["Mer", constuctor[0][1], drivers[0][2]+drivers[2][2]],
@@ -90,12 +90,8 @@ constuctor = [
     ["Will", constuctor[8][1], drivers[16][2]+drivers[17][2]],
     ["Has", constuctor[9][1], drivers[18][2]+drivers[19][2]],
 ]
-"""
 
 #--------------------------------------------------------------------------------
-
-
-
 
 
 lage = []
