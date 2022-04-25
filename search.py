@@ -6,10 +6,10 @@ getcontext().prec = 4
 navn = 0
 value = 1
 points = 2
-megadriver = True
+megadriver = False
 
 runder = 3
-max_value = 103.3
+max_value = 105
 min_value = 90
 
 nonTurbo = ["Ham", "Ver", "Rus"]
@@ -58,25 +58,25 @@ poeng = [0,49,32,34,28,26,24,22,20,18,16,14,12,10,8,6,4,2,1]
 runder = 1
 drivers = [
     ["Ham", drivers[0][1], poeng[7]],
-    ["Ver", drivers[1][1], poeng[3]],
+    ["Ver", drivers[1][1], poeng[2]],
     ["Rus", drivers[2][1], poeng[5]],
     ["Lec", drivers[3][1], poeng[1]],
-    ["Per", drivers[4][1], poeng[4]],
+    ["Per", drivers[4][1], poeng[3]],
     ["Sai", drivers[5][1], poeng[2]],
-    ["Lan", drivers[6][1], poeng[10]],
+    ["Lan", drivers[6][1], poeng[8]],
     ["Ric", drivers[7][1], poeng[15]],
     ["Gas", drivers[8][1], poeng[13]],
     ["Alo", drivers[9][1], poeng[8]],
     ["Oco", drivers[10][1], poeng[9]],
-    ["Vet", drivers[11][1], poeng[8]],
+    ["Vet", drivers[11][1], poeng[13]],
     ["Str", drivers[12][1], poeng[16]],
-    ["Bot", drivers[13][1], poeng[11]],
+    ["Bot", drivers[13][1], poeng[8]],
     ["Tsu", drivers[14][1], poeng[10]],
     ["Zho", drivers[15][1], poeng[18]],
     ["Alb", drivers[16][1], poeng[18]],
     ["Lat", drivers[17][1], poeng[18]],
-    ["Msc", drivers[18][1], poeng[10]],
-    ["Mag", drivers[19][1], poeng[6]]
+    ["Msc", drivers[18][1], poeng[18]],
+    ["Mag", drivers[19][1], poeng[10]]
 ]
 constuctor = [
     ["Mer", constuctor[0][1], drivers[0][2]+drivers[2][2]],
